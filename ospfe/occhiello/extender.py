@@ -37,6 +37,7 @@ class OcchielloExtender(object):
                 description=u"",
             ),
             required=False,
+            searchable=True,
         ),
     ]
 
