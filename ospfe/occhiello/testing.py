@@ -18,25 +18,20 @@ class OcchielloSandboxLayer(PloneSandboxLayer):
     def setUpZope(self, app, configurationContext):
         # Load ZCML for this package
         import ospfe.occhiello
-        import collective.contentleadimage
         xmlconfig.file('configure.zcml',
-                       collective.fbshare,
-                       context=configurationContext)
-        xmlconfig.file('configure.zcml',
-                       collective.contentleadimage,
+                       ospfe.occhiello,
                        context=configurationContext)
 
     def setUpPloneSite(self, portal):
-        applyProfile(portal, 'collective.fbshare:default')
-        applyProfile(portal, 'collective.contentleadimage:default')
+        applyProfile(portal, 'ospfe.occhiello:default')
         setRoles(portal, TEST_USER_ID, ['Member', 'Manager'])
 
 
-FBSHARE_FIXTURE = FbShare()
-FBSHARE_INTEGRATION_TESTING = \
-    IntegrationTesting(bases=(FBSHARE_FIXTURE, ),
-                       name="FbShare:Integration")
-FBSHARE_FUNCTIONAL_TESTING = \
-    FunctionalTesting(bases=(FBSHARE_FIXTURE, ),
-                      name="FbShare:Functional")
+OCCHIELLO_FIXTURE = OcchielloSandboxLayer()
+OCCHIELLO_INTEGRATION_TESTING = \
+    IntegrationTesting(bases=(OCCHIELLO_FIXTURE, ),
+                       name="Occhiello:Integration")
+OCCHIELLO_FUNCTIONAL_TESTING = \
+    FunctionalTesting(bases=(OCCHIELLO_FIXTURE, ),
+                      name="Occhiello:Functional")
 
