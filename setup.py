@@ -3,6 +3,8 @@ import os
 
 version = '2.0.dev0'
 
+tests_require = ['plone.app.testing', ]
+
 setup(name='ospfe.occhiello',
       version=version,
       description="Add a new Plone introduction field (half-title), displayed before document title",
@@ -18,12 +20,14 @@ setup(name='ospfe.occhiello',
       keywords='plone title field plonegov half-title',
       author='RedTurtle Technology',
       author_email='sviluppoplone@redturtle.it',
-      url='http://svn.plone.org/svn/collective/',
+      url='https://github.com/RedTurtle/ospfe.occhiello',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['ospfe'],
       include_package_data=True,
       zip_safe=False,
+      tests_require=tests_require,
+      extras_require=dict(test=tests_require),
       install_requires=[
           'setuptools',
           'archetypes.schemaextender',

@@ -7,3 +7,5 @@ Changelog
 First public release
 
 - Now using archetypes.schemaextender
+- Moved source from legacy code
+

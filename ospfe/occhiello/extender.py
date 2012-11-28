@@ -11,7 +11,6 @@ from plone.registry.interfaces import IRegistry
 from Products.Archetypes import atapi
 from Products.Archetypes.interfaces import IBaseObject
 
-from archetypes.schemaextender.interfaces import ISchemaExtender
 from archetypes.schemaextender.interfaces import IOrderableSchemaExtender
 from archetypes.schemaextender.interfaces import IBrowserLayerAwareExtender
 from archetypes.schemaextender.field import ExtensionField

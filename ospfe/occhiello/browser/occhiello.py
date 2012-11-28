@@ -2,7 +2,6 @@
 
 from plone.memoize.instance import memoize
 from plone.app.layout.viewlets import common
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 class OcchielloViewlet(common.ViewletBase):
     """Display the occhiello viewlet"""

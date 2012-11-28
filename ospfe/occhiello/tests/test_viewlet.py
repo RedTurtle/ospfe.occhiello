@@ -3,12 +3,7 @@
 import unittest
 
 from zope import interface
-from zope.component import getMultiAdapter
 from zope.component import queryUtility
-
-from plone.app.testing import setRoles
-from plone.app.testing import TEST_USER_ID
-from plone.app.testing import logout
 
 from plone.registry.interfaces import IRegistry
 
@@ -38,12 +33,10 @@ class TestQueryView(unittest.TestCase):
 
     def test_field_on_edit(self):
         portal = self.layer['portal']
-        request = self.layer['request']
         self.assertTrue('<input type="text" name="occhiello"' in portal.page.base_edit())
 
     def test_viewlet_display(self):
         portal = self.layer['portal']
-        request = self.layer['request']
         self.assertFalse('<p class="occhiello">' \
                     in portal.page())
         portal.page.edit(occhiello='The lazy dog...')
