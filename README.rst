@@ -17,6 +17,13 @@ It's a simple text line that can be used for an introduction text to be read bef
    :alt: Occhiello preview
    :target: https://blog.redturtle.it/pypi-images/ospfe.occhiello/occhiello-preview/image
 
+Content types
+-------------
+
+You can select the set of types where to add the field to from the Plone control panel.
+
+Field is displayed through a viewlet, so no content view customization is needed.
+
 Credits
 =======
 
