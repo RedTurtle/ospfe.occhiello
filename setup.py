@@ -9,13 +9,14 @@ setup(name='ospfe.occhiello',
       version=version,
       description="Add a new Plone introduction field (half-title), displayed before document title",
       long_description=open("README.rst").read() + "\n" +
-                       open(os.path.join("docs", "HISTORY.txt")).read(),
+                       open(os.path.join("docs", "HISTORY.rst")).read(),
       # Get more strings from
       # http://pypi.python.org/pypi?:action=list_classifiers
       classifiers=[
         "Development Status :: 4 - Beta",
         "Framework :: Plone",
         "Framework :: Plone :: 4.2",
+        "Framework :: Plone :: 4.3",
         "Programming Language :: Python",
         ],
       keywords='plone title field plonegov half-title',

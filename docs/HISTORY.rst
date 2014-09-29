@@ -4,8 +4,8 @@ Changelog
 2.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Fixed issue with calling ``@@manage-viewlets``
+  [keul]
 
 2.0 (2012-11-28)
 ----------------

@@ -8,11 +8,13 @@ class OcchielloViewlet(common.ViewletBase):
     
     @memoize
     def _occhiello(self):
-        return self.context.getField('occhiello')
+        if hasattr(self.context, 'getField'):
+            return self.context.getField('occhiello')
+        return None
     
     @property
     def occhiello(self):
         return self._occhiello().get(self.context)
-    
+
     def available(self):
         return self._occhiello() and self._occhiello().get(self.context)
