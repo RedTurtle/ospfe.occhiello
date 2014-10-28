@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.0.1 (unreleased)
+2.0.1 (2014-10-28)
 ------------------
 
 - Fixed issue with calling ``@@manage-viewlets``
